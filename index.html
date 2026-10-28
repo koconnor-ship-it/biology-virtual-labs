@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="An interactive learning path through the experiments that established DNA as the genetic material.">
+<title>Discovering the Genetic Material | Virtual Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#EEF1F6;--surface:#fff;--ink:#16202E;--muted:#55657A;--line:#CBD3E0;--soft:#E6EDF8;--accent:#1F4FA8;--accent-ink:#fff;--focus:#1B5FD1;box-sizing:border-box}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0D1520;--surface:#162231;--ink:#E7EDF5;--muted:#9DAEC2;--line:#2A3C52;--soft:#1D2D42;--accent:#7FB0FF;--accent-ink:#0D1520;--focus:#9CC2FF}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0D1520;--surface:#162231;--ink:#E7EDF5;--muted:#9DAEC2;--line:#2A3C52;--soft:#1D2D42;--accent:#7FB0FF;--accent-ink:#0D1520;--focus:#9CC2FF}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;transition:background .2s,color .2s}.wrap{max-width:1000px;margin:0 auto;padding:76px 20px 64px}h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0}h1{font-size:clamp(2.25rem,6vw,4rem);letter-spacing:-.025em;max-width:780px}h2{font-size:1.65rem}h3{font-size:1.25rem}p{margin:.45em 0}.lede{color:var(--muted);max-width:66ch;font-size:1.12rem;margin-top:16px}.eyebrow{color:var(--accent);font-weight:600;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}.topbar{position:absolute;top:16px;right:max(16px,calc((100vw - 960px)/2));display:flex;gap:10px;align-items:center}.topbar button{font:inherit;font-size:.86rem;font-weight:600;padding:7px 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}.topbar button:hover{border-color:var(--accent)}button:focus-visible,a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}.how{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}.how div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:15px;display:flex;gap:12px;align-items:flex-start}.num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font-family:Fraunces,Georgia,serif;font-weight:700}.how span{font-size:.95rem}.path{margin-top:46px}.section-intro{color:var(--muted);max-width:66ch}.timeline{list-style:none;padding:0;margin:28px 0 0;position:relative}.timeline:before{content:"";position:absolute;left:12px;top:12px;bottom:16px;width:2px;background:var(--line)}.item{position:relative;padding-left:44px;margin-bottom:20px}.item:before{content:"";position:absolute;left:4px;top:20px;width:18px;height:18px;border-radius:50%;background:var(--accent);border:4px solid var(--bg)}.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:0 3px 14px #17263b08}.year{font-size:.78rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-bottom:5px}.who{color:var(--muted);font-size:.95rem;margin-top:4px}.q{margin:14px 0 6px;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:1.12rem}.do{color:var(--muted);font-size:.97rem;margin:0}.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px}a.btn{display:inline-block;text-decoration:none;font-weight:600;border-radius:10px;padding:10px 16px;border:1.5px solid var(--accent);transition:transform .15s,filter .15s}a.btn:hover{transform:translateY(-1px);filter:brightness(1.08)}a.btn.primary{background:var(--accent);color:var(--accent-ink)}a.btn.secondary{background:transparent;color:var(--accent)}.more{margin-top:13px;font-size:.9rem;color:var(--muted)}.more a{color:var(--accent);font-weight:600}.note{margin-top:28px;background:var(--soft);border-radius:12px;padding:16px 18px;color:var(--muted);font-size:.93rem}footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}.footer-title{color:var(--ink);font-weight:600}@media(max-width:700px){.wrap{padding:72px 15px 48px}.how{grid-template-columns:1fr}.card{padding:18px}.item{padding-left:36px}.timeline:before{left:10px}.item:before{left:2px}h1{font-size:clamp(2.2rem,11vw,3.2rem)}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="topbar"><button id="theme" type="button" aria-label="Toggle dark mode">Dark mode</button></div>
+<main class="wrap">
+<header>
+  <p class="eyebrow">AP Biology · Virtual investigation</p>
+  <h1>Discovering the genetic material</h1>
+  <p class="lede">Five experiments, five questions. Run each simulation, record what you find on the lab sheet, and follow the evidence that revealed DNA as the genetic material.</p>
+  <div class="how" aria-label="How to use this page">
+    <div><b class="num">1</b><span>Open the <strong>simulation</strong> and work through the experiment.</span></div>
+    <div><b class="num">2</b><span>Open the <strong>lab sheet</strong> and record your data and answers as you go.</span></div>
+    <div><b class="num">3</b><span>Write your conclusion, then move to the next experiment.</span></div>
+  </div>
+</header>
+<section class="path" aria-labelledby="path-title">
+  <h2 id="path-title">The path of discovery</h2>
+  <p class="section-intro">Go in order. Each experiment answers a question that the one before it left open.</p>
+  <ol class="timeline">
+    <li class="item"><article class="card">
+      <div class="year">1928 · Experiment 1</div><h3>Griffith’s transformation experiment</h3><div class="who">Frederick Griffith</div>
+      <p class="q">Can something pass from dead bacteria to living ones and change their traits?</p><p class="do">Inject mice with live and heat-killed bacteria, wait five days, and test the blood.</p>
+      <div class="btns"><a class="btn primary" href="https://claude.ai/artifact/9zHEJLrus47TbYcfUoA95J" target="_blank" rel="noopener noreferrer">Open simulation ↗</a><a class="btn secondary" href="https://claude.ai/artifact/XioVmVMfLJXaEjzUS1H62P" target="_blank" rel="noopener noreferrer">Open lab sheet ↗</a></div>
+    </article></li>
+    <li class="item"><article class="card">
+      <div class="year">1944 · Experiment 2</div><h3>The Avery–MacLeod–McCarty experiment</h3><div class="who">Oswald Avery, Colin MacLeod, and Maclyn McCarty</div>
+      <p class="q">Which molecule is the “transforming principle”?</p><p class="do">Purify an extract from bacteria, analyze it, and use enzymes to destroy one type of molecule at a time.</p>
+      <div class="btns"><a class="btn primary" href="https://claude.ai/artifact/PCBLAQNKrymob1Ed8D4S2g" target="_blank" rel="noopener noreferrer">Open simulation ↗</a><a class="btn secondary" href="https://claude.ai/artifact/SCY3pQN4188miaH73Xuqcj" target="_blank" rel="noopener noreferrer">Open lab sheet ↗</a></div>
+    </article></li>
+    <li class="item"><article class="card">
+      <div class="year">1952 · Experiment 3</div><h3>The Hershey–Chase experiment</h3><div class="who">Alfred Hershey and Martha Chase</div>
+      <p class="q">When a virus infects a cell, does it inject protein or DNA?</p><p class="do">Tag a phage’s protein and DNA with radioactive labels, then blend, centrifuge, and measure where each label ends up.</p>
+      <div class="btns"><a class="btn primary" href="https://claude.ai/artifact/VTGeJS4wWpaiSak7gPnwe6" target="_blank" rel="noopener noreferrer">Open simulation ↗</a><a class="btn secondary" href="https://claude.ai/artifact/3Qxh1dPchbSx9vXDGpYzr6" target="_blank" rel="noopener noreferrer">Open lab sheet ↗</a></div>
+      <p class="more">Need a shorter version? Try the <a href="https://claude.ai/artifact/CPoNBLBd7akBywBPxciuNs" target="_blank" rel="noopener noreferrer">lab steps</a> or the <a href="https://claude.ai/artifact/G7T5rniKDVsxiNuZRLuuCw" target="_blank" rel="noopener noreferrer">data-focus sheet</a>.</p>
+    </article></li>
+    <li class="item"><article class="card">
+      <div class="year">1951–1953 · Experiment 4</div><h3>Franklin’s X-ray diffraction experiment</h3><div class="who">Rosalind Franklin and Raymond Gosling</div>
+      <p class="q">What shape is the DNA molecule?</p><p class="do">Photograph DNA fibers with X-rays, measure the pattern on the film, and build a model that reproduces it.</p>
+      <div class="btns"><a class="btn primary" href="https://claude.ai/artifact/JqZEJkYW2AJhvKXZSt5WXu" target="_blank" rel="noopener noreferrer">Open simulation ↗</a><a class="btn secondary" href="https://claude.ai/artifact/1dWBCpKoecJiiDN3cx3A6A" target="_blank" rel="noopener noreferrer">Open lab sheet ↗</a></div>
+    </article></li>
+    <li class="item"><article class="card">
+      <div class="year">1958 · Experiment 5</div><h3>The Meselson–Stahl experiment</h3><div class="who">Matthew Meselson and Franklin Stahl</div>
+      <p class="q">How does a cell copy its DNA?</p><p class="do">Label DNA with heavy nitrogen, let bacteria copy it, separate it by density, and compare three models of replication.</p>
+      <div class="btns"><a class="btn primary" href="https://claude.ai/artifact/719CvGVZWkzNWd5AndKsby" target="_blank" rel="noopener noreferrer">Open simulation ↗</a><a class="btn secondary" href="https://claude.ai/artifact/AF5BzfeCcWFpeoVMzera1e" target="_blank" rel="noopener noreferrer">Open lab sheet ↗</a></div>
+    </article></li>
+  </ol>
+  <div class="note"><strong>Before you submit:</strong> Support your conclusion with evidence from the simulation and explain how that evidence supports your claim. The simulations use simplified, modeled data rather than exact reproductions of the original experiments.</div>
+</section>
+<footer><p class="footer-title">Student reminder</p><p>Complete the experiments in sequence, record observations as you go, and follow your teacher’s instructions for submitting each lab sheet.</p></footer>
+</main>
+<script>
+(() => {
+  const btn = document.getElementById('theme');
+  const root = document.documentElement;
+  btn.addEventListener('click', () => {
+    const currentlyDark = root.getAttribute('data-theme') === 'dark' || (!root.hasAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    root.setAttribute('data-theme', currentlyDark ? 'light' : 'dark');
+    btn.textContent = currentlyDark ? 'Dark mode' : 'Light mode';
+    btn.setAttribute('aria-label', currentlyDark ? 'Switch to dark mode' : 'Switch to light mode');
+  });
+})();
+</script>
+</body>
+</html>
